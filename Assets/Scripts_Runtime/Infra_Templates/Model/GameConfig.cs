@@ -2,9 +2,9 @@ using System;
 using MortiseFrame.Swing;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
-    [CreateAssetMenu(fileName = "SO_GameConfig", menuName = "Air/GameConfig")]
+    [CreateAssetMenu(fileName = "SO_GameConfig", menuName = "Boids/GameConfig")]
     public class GameConfig : ScriptableObject {
 
         // Game

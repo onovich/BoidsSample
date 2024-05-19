@@ -2,7 +2,7 @@ using MortiseFrame.Swing;
 using TenonKit.Prism;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public static class GameGameDomain {
 

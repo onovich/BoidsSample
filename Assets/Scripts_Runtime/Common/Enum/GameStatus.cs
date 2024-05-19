@@ -1,4 +1,4 @@
-namespace Air {
+namespace Boids {
 
     public enum GameStatus {
         NotInGame,

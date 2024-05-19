@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Air {
+namespace Boids {
 
     public class InputEntity {
 

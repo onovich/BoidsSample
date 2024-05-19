@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.U2D;
 
-namespace Air {
+namespace Boids {
 
     public class Main : MonoBehaviour {
 

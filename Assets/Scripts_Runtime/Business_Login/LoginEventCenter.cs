@@ -1,6 +1,6 @@
 using System;
 
-namespace Air{
+namespace Boids{
 
     public class LoginEventCenter {
 

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.Tilemaps;
 
-namespace Air {
+namespace Boids {
 
     public class AssetsInfraContext {
 

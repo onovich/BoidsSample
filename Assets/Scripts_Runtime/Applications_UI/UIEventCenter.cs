@@ -1,6 +1,6 @@
 using System;
 
-namespace Air.UI {
+namespace Boids.UI {
 
     public class UIEventCenter {
 

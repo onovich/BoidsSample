@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Air.Modifier {
+namespace Boids.Modifier {
 
     public class SpikerEditorEntity : MonoBehaviour {
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public static class GameBusiness {
 

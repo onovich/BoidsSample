@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using UnityEngine.AddressableAssets;
 
-namespace Air {
+namespace Boids {
 
     public static class TemplateInfra {
 

@@ -1,10 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using Air.UI;
+using Boids.UI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace Air {
+namespace Boids {
     public static class UIApp {
 
         public static void Init(UIAppContext ctx) {

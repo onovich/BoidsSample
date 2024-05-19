@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Runtime.CompilerServices;
 
-namespace Air {
+namespace Boids {
 
     public static class GLog {
 

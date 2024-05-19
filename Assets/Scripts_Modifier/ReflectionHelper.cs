@@ -2,7 +2,7 @@
 
 using System.Reflection;
 
-namespace Air.Modifier {
+namespace Boids.Modifier {
 
     public static class ReflectionHelper {
 

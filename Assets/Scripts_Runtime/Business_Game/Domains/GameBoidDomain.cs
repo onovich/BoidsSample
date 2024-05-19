@@ -1,7 +1,7 @@
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public static class GameBoidDomain {
 

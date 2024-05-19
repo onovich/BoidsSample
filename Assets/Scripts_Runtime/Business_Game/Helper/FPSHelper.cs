@@ -1,7 +1,7 @@
 ﻿#if UNITY_EDITOR
 
 using UnityEngine;
-namespace Air {
+namespace Boids {
 
 	public static class FPSHelper {
 		static float T = 0.0f;

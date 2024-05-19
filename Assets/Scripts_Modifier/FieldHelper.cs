@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace Air.Modifier {
+namespace Boids.Modifier {
 
     public static class FieldHelper {
 

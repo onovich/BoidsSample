@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Air {
+namespace Boids {
 
     public class MapEntity : MonoBehaviour {
 

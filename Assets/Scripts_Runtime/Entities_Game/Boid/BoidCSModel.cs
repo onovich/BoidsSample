@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
     public struct BoidCSModel {
         public Vector3 position;
         public Vector3 direction;

@@ -2,9 +2,9 @@ using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Air {
+namespace Boids {
 
-    [CreateAssetMenu(fileName = "SO_Map", menuName = "Air/MapTM")]
+    [CreateAssetMenu(fileName = "SO_Map", menuName = "Boids/MapTM")]
     public class MapTM : ScriptableObject {
 
         public int typeID;

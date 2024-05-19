@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public class BlockEntity : MonoBehaviour {
 

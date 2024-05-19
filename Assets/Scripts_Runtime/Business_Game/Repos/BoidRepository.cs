@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using GameFunctions;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public class BoidRepository {
 

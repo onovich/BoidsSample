@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using MortiseFrame.Loom;
 using UnityEngine;
-using Air.UI;
+using Boids.UI;
 
-namespace Air {
+namespace Boids {
 
     public class UIAppContext {
 

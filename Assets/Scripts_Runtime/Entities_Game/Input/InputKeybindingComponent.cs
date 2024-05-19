@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public struct InputKeybindingComponent {
 

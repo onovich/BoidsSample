@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Air{
+namespace Boids{
 
     public class LoginBusiness {
 

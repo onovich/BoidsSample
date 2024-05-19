@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
 
-namespace Air.Modifier {
+namespace Boids.Modifier {
 
     public static class AddressableHelper {
 

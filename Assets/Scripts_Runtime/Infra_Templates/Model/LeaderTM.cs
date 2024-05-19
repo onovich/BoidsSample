@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
-    [CreateAssetMenu(fileName = "SO_Leader", menuName = "Air/LeaderTM")]
+    [CreateAssetMenu(fileName = "SO_Leader", menuName = "Boids/LeaderTM")]
     public class LeaderTM : ScriptableObject {
 
         [Header("Base Info")]

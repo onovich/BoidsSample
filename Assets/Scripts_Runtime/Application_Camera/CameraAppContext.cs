@@ -4,7 +4,7 @@ using MortiseFrame.Swing;
 using TenonKit.Vista.Camera2D;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public class CameraAppContext {
 

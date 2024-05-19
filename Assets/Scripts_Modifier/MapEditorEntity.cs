@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Air.Modifier {
+namespace Boids.Modifier {
 
     public class MapEditorEntity : MonoBehaviour {
 

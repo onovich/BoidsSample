@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
     public class LeaderRepository {
 

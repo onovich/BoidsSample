@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Air {
+namespace Boids {
 
     public static class GameMapDomain {
 

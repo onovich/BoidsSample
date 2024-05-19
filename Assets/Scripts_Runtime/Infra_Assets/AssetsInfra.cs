@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.AddressableAssets;
 
-namespace Air
+namespace Boids
 {
 
     public static class AssetsInfra

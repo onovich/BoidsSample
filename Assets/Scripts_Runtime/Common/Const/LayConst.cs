@@ -1,4 +1,4 @@
-namespace Air {
+namespace Boids {
 
     public static class LayConst {
 

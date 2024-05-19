@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-namespace Air {
+namespace Boids {
 
-    [CreateAssetMenu(fileName = "SO_Block", menuName = "Air/BlockTM")]
+    [CreateAssetMenu(fileName = "SO_Block", menuName = "Boids/BlockTM")]
     public class BlockTM : ScriptableObject {
 
         public int typeID;
