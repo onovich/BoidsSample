@@ -18,9 +18,6 @@ namespace Boids {
 
         public static void Tick(GameBusinessContext ctx, float dt) {
 
-            InputEntity inputEntity = ctx.inputEntity;
-
-            ProcessInput(ctx, dt);
             PreTick(ctx, dt);
 
             const float intervalTime = 0.01f;
@@ -36,31 +33,10 @@ namespace Boids {
                 }
             }
             LateTick(ctx, dt);
-            inputEntity.Reset();
 
-        }
-
-        public static void ProcessInput(GameBusinessContext ctx, float dt) {
-            GameInputDomain.Player_BakeInput(ctx, dt);
-
-            var game = ctx.gameEntity;
-            var status = game.fsmComponent.status;
-            if (status == GameStatus.Gaming) {
-                GameInputDomain.Owner_BakeInput(ctx, ctx.Leader_GetOwner());
-            }
         }
 
         static void PreTick(GameBusinessContext ctx, float dt) {
-            var game = ctx.gameEntity;
-            var status = game.fsmComponent.status;
-            if (status == GameStatus.Gaming) {
-
-                // Result
-                GameGameDomain.ApplyGameResult(ctx);
-            }
-            if (status == GameStatus.GameOver) {
-                GameGameDomain.ApplyRestartGame(ctx);
-            }
         }
 
         static void FixedTick(GameBusinessContext ctx, float dt) {
@@ -94,7 +70,6 @@ namespace Boids {
 
             var game = ctx.gameEntity;
             var status = game.fsmComponent.status;
-            var owner = ctx.Leader_GetOwner();
             if (status == GameStatus.Gaming || status == GameStatus.GameOver) {
 
                 // Boids
@@ -105,13 +80,11 @@ namespace Boids {
                 }
 
                 // Camera
-                CameraApp.LateTick(ctx.cameraContext, dt);
 
                 // UI
 
             }
             // VFX
-            VFXApp.LateTick(ctx.vfxContext, dt);
 
             // FPS
             FPSHelper.Tick(dt);
@@ -132,19 +105,6 @@ namespace Boids {
             var status = game.fsmComponent.status;
             if (status == GameStatus.Gaming) {
                 ExitGame(ctx);
-            }
-        }
-
-        public static void OnDrawGizmos(GameBusinessContext ctx, bool drawCameraGizmos) {
-            if (ctx == null) {
-                return;
-            }
-            var game = ctx.gameEntity;
-            var status = game.fsmComponent.status;
-            if (status == GameStatus.Gaming) {
-                if (drawCameraGizmos) {
-                    CameraApp.OnDrawGizmos(ctx.cameraContext);
-                }
             }
         }
 

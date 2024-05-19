@@ -4,47 +4,6 @@ namespace Boids {
 
     public static class GameFactory {
 
-        public static LeaderEntity Leader_Spawn(TemplateInfraContext templateInfraContext,
-                                 AssetsInfraContext assetsInfraContext,
-                                 IDRecordService idRecordService,
-                                 int typeID,
-                                 Vector2 pos,
-                                 AllyStatus allyStatus) {
-
-            var has = templateInfraContext.Leader_TryGet(typeID, out var leaderTM);
-            if (!has) {
-                GLog.LogError($"Leader {typeID} not found");
-            }
-
-            var prefab = assetsInfraContext.Entity_GetLeader();
-            var leader = GameObject.Instantiate(prefab).GetComponent<LeaderEntity>();
-            leader.Ctor();
-
-            // Base Info
-            leader.entityID = idRecordService.PickLeaderEntityID();
-            leader.typeID = typeID;
-            leader.allyStatus = allyStatus;
-
-            // Set Attr
-            leader.moveSpeed = leaderTM.moveSpeed;
-            leader.rotationSpeed = leaderTM.rotationSpeed;
-
-            // Set Pos
-            leader.Pos_SetPos(pos);
-
-            // Set Mesh
-            leader.Mesh_Set(leaderTM.mesh);
-
-            // Set FSM
-            leader.FSM_EnterIdle();
-
-            // Set VFX
-            leader.deadVFXName = leaderTM.deadVFX.name;
-            leader.deadVFXDuration = leaderTM.deadVFXDuration;
-
-            return leader;
-        }
-
         public static MapEntity Map_Spawn(TemplateInfraContext templateInfraContext,
                                  AssetsInfraContext assetsInfraContext,
                                  int typeID) {
@@ -119,76 +78,6 @@ namespace Boids {
             boid.deadVFXDuration = boidTM.deadVFXDuration;
 
             return boid;
-        }
-
-        public static BlockEntity Block_Spawn(TemplateInfraContext templateInfraContext,
-                                  AssetsInfraContext assetsInfraContext,
-                                  IDRecordService idRecordService,
-                                  int typeID,
-                                  Vector2 pos,
-                                  Vector2 size) {
-
-            var has = templateInfraContext.Block_TryGet(typeID, out var blockTM);
-            if (!has) {
-                GLog.LogError($"Boid {typeID} not found");
-            }
-
-            var prefab = assetsInfraContext.Entity_GetBlock();
-            var block = GameObject.Instantiate(prefab).GetComponent<BlockEntity>();
-            block.Ctor();
-
-            // Base Info
-            block.entityID = idRecordService.PickBlockEntityID();
-            block.typeID = typeID;
-
-            // Set Pos
-            block.Pos_SetPos(pos);
-
-            // Set Size
-            block.Size_SetSize(size);
-
-            // Set Mesh
-            block.Mesh_Set(blockTM.mesh);
-
-            // Rename
-            block.Rename();
-
-            return block;
-        }
-
-        public static SpikeEntity Spike_Spawn(TemplateInfraContext templateInfraContext,
-                                  AssetsInfraContext assetsInfraContext,
-                                  IDRecordService idRecordService,
-                                  int typeID,
-                                  Vector2 pos,
-                                  Vector2 size) {
-
-            var has = templateInfraContext.Spike_TryGet(typeID, out var blockTM);
-            if (!has) {
-                GLog.LogError($"Boid {typeID} not found");
-            }
-
-            var prefab = assetsInfraContext.Entity_GetSpike();
-            var spike = GameObject.Instantiate(prefab).GetComponent<SpikeEntity>();
-            spike.Ctor();
-
-            // Base Info
-            spike.entityID = idRecordService.PickSpikeEntityID();
-            spike.typeID = typeID;
-
-            // Set Pos
-            spike.Pos_SetPos(pos);
-
-            // Set Size
-            spike.Size_SetSize(size);
-
-            // Set Mesh
-            spike.Mesh_Set(blockTM.mesh);
-
-            // Rename
-            spike.Rename();
-
-            return spike;
         }
 
     }

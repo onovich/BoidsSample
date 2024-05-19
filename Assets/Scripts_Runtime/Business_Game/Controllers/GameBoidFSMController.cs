@@ -47,11 +47,6 @@ namespace Boids {
                 fsm.dead_isEntering = false;
             }
 
-            // VFX
-            VFXApp.AddVFXToWorld(ctx.vfxContext, boid.deadVFXName, boid.deadVFXDuration, boid.Pos);
-
-            // Camera
-            CameraApp.ShakeOnce(ctx.cameraContext, ctx.cameraContext.mainCameraID);
             boid.needTearDown = true;
         }
 

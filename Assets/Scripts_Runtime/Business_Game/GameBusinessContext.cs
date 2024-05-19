@@ -8,22 +8,12 @@ namespace Boids {
 
         // Entity
         public GameEntity gameEntity;
-        public PlayerEntity playerEntity;
-        public InputEntity inputEntity; // External
         public MapEntity currentMapEntity;
 
         public BoidRepository boidRepo;
-        public BlockRepository blockRepo;
-        public SpikeRepository spikeRepo;
-        public LeaderRepository leaderRepo;
 
         // App
         public UIAppContext uiContext;
-        public VFXAppContext vfxContext;
-        public CameraAppContext cameraContext;
-
-        // Camera
-        public Camera mainCamera;
 
         // Service
         public IDRecordService idRecordService;
@@ -40,35 +30,20 @@ namespace Boids {
         public Vector2 ownerSpawnPoint;
 
         // TEMP
-        public RaycastHit2D[] hitResults;
         public BoidCSModel[] boidCSModelTemp;
         public ComputeBuffer boidBuffer;
 
         public GameBusinessContext() {
             gameEntity = new GameEntity();
-            playerEntity = new PlayerEntity();
             idRecordService = new IDRecordService();
             randomService = new RandomService();
             boidRepo = new BoidRepository();
-            blockRepo = new BlockRepository();
-            spikeRepo = new SpikeRepository();
-            leaderRepo = new LeaderRepository();
-            hitResults = new RaycastHit2D[100];
         }
 
         public void Reset() {
             idRecordService.Reset();
             boidRepo.Clear();
-            blockRepo.Clear();
-            spikeRepo.Clear();
-            leaderRepo.Clear();
             boidBuffer?.Release();
-        }
-
-        // Leader
-        public LeaderEntity Leader_GetOwner() {
-            leaderRepo.TryGetLeader(playerEntity.ownerLeaderEntityID, out var leader);
-            return leader;
         }
 
     }

@@ -16,13 +16,6 @@
       "dependencies": {},
       "hash": "00088f668d560f8a40af249096f581ea28ab4dde"
     },
-    "com.mortise.loom": {
-      "version": "ssh://git@github.com/onovich/Loom.git?path=/Assets/com.mortise.loom#main",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "d28429bcf558304d11a6f7a38300db9b76cb524e"
-    },
     "com.mortise.swing": {
       "version": "ssh://git@github.com/onovich/Swing.git?path=/Assets/com.mortise.swing#unity-edition",
       "depth": 0,
@@ -30,19 +23,12 @@
       "dependencies": {},
       "hash": "28e16b6f750137587b7527e6832b8d9bb2dac059"
     },
-    "com.tenon.prism": {
-      "version": "ssh://git@github.com/onovich/Prism.git?path=/Assets/com.tenon.prism#main",
+    "com.tenon.loom": {
+      "version": "ssh://git@github.com/onovich/Loom.git?path=/Assets/com.tenon.loom#main",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "a0a83b78f4e6257dc7435583eb4b624238e36cc7"
-    },
-    "com.tenon.vista.camera2d": {
-      "version": "ssh://git@github.com/onovich/Vista.git?path=/Assets/com.tenon.vista.camera2d#main",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "2d89d2157b9383abbee1823f91f593d09f1140d5"
+      "hash": "0f1c49a82da30c6412085853f6e30dea1a3c4b6b"
     },
     "com.unity.2d.animation": {
       "version": "9.0.4",

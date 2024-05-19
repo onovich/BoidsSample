@@ -14,21 +14,9 @@ namespace Boids {
         Dictionary<int, BoidTM> boidDict;
         public AsyncOperationHandle boidHandle;
 
-        Dictionary<int, BlockTM> blockDict;
-        public AsyncOperationHandle blockHandle;
-
-        Dictionary<int, SpikeTM> spikeDict;
-        public AsyncOperationHandle spikeHandle;
-
-        Dictionary<int, LeaderTM> leaderDict;
-        public AsyncOperationHandle leaderHandle;
-
         public TemplateInfraContext() {
             mapDict = new Dictionary<int, MapTM>();
             boidDict = new Dictionary<int, BoidTM>();
-            blockDict = new Dictionary<int, BlockTM>();
-            spikeDict = new Dictionary<int, SpikeTM>();
-            leaderDict = new Dictionary<int, LeaderTM>();
         }
 
         // Game
@@ -66,52 +54,10 @@ namespace Boids {
             return has;
         }
 
-        // Block
-        public void Block_Add(BlockTM block) {
-            blockDict.Add(block.typeID, block);
-        }
-
-        public bool Block_TryGet(int typeID, out BlockTM block) {
-            var has = blockDict.TryGetValue(typeID, out block);
-            if (!has) {
-                GLog.LogError($"Block {typeID} not found");
-            }
-            return has;
-        }
-
-        // Spike
-        public void Spike_Add(SpikeTM spike) {
-            spikeDict.Add(spike.typeID, spike);
-        }
-
-        public bool Spike_TryGet(int typeID, out SpikeTM spike) {
-            var has = spikeDict.TryGetValue(typeID, out spike);
-            if (!has) {
-                GLog.LogError($"Spike {typeID} not found");
-            }
-            return has;
-        }
-
-        // Leader
-        public void Leader_Add(LeaderTM leader) {
-            leaderDict.Add(leader.typeID, leader);
-        }
-
-        public bool Leader_TryGet(int typeID, out LeaderTM leader) {
-            var has = leaderDict.TryGetValue(typeID, out leader);
-            if (!has) {
-                GLog.LogError($"Leader {typeID} not found");
-            }
-            return has;
-        }
-
         // Clear
         public void Clear() {
             mapDict.Clear();
             boidDict.Clear();
-            blockDict.Clear();
-            spikeDict.Clear();
-            leaderDict.Clear();
         }
 
     }

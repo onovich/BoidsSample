@@ -17,7 +17,7 @@ namespace Boids {
         public void Ctor() {
             terrainTypeIDDict = new Dictionary<Vector2, int>();
         }
-
+        
         public void SetSize(Vector3 size) {
             spr.size = size;
         }
